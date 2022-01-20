@@ -1,7 +1,7 @@
 @value makerGreen, makerLightPink, makerWhite from "../../common/colors.css";
 
 .login {
-  width: 100%;
+  width: 30em;
   text-align: center;
   display: flex;
   flex-direction: column;
