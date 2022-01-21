@@ -5,7 +5,43 @@ import Preview from "../preview/preview";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import styles from "./maker.module.css";
+import { useState } from "react";
 const Maker = ({ authService }) => {
+  const [cards, setCards] = useState([
+    {
+      id: 1,
+      name: "muni",
+      company: "wehealed",
+      theme: "light",
+      title: "muni code",
+      email: "muni6983@gmail.com",
+      message: "hihi",
+      fileName: "muni image",
+      fileURL: "muni.png",
+    },
+    {
+      id: 2,
+      name: "muni2",
+      company: "wehealed",
+      theme: "light",
+      title: "muni code",
+      email: "muni6983@gmail.com",
+      message: "hihi",
+      fileName: "muni image",
+      fileURL: "muni.png",
+    },
+    {
+      id: 3,
+      name: "muni3",
+      company: "wehealed",
+      theme: "light",
+      title: "muni code",
+      email: "muni6983@gmail.com",
+      message: "hihi",
+      fileName: "muni image",
+      fileURL: "muni.png",
+    },
+  ]);
   const navigate = useNavigate();
   const onLogout = () => {
     authService.logout();
@@ -22,8 +58,8 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor />
-        <Preview />
+        <Editor cards={cards} />
+        <Preview cards={cards} />
       </div>
       <Footer />
     </section>
