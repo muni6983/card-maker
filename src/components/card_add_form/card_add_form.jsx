@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import Button from "../button/button";
-import ImageFileInput from "../image_file_input/image_file_input";
 import styles from "./card_add_form.module.css";
-const CardAddForm = ({ creadteOrUpdateCard }) => {
+const CardAddForm = ({ FileInput, creadteOrUpdateCard }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -75,7 +74,7 @@ const CardAddForm = ({ creadteOrUpdateCard }) => {
         placeholder="Message"
       ></textarea>
       <div className={styles.fileInput}>
-        <ImageFileInput />
+        <FileInput />
       </div>
       <Button name="Add" onClick={onSubmit} />
     </form>

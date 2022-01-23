@@ -3,7 +3,7 @@ import styles from "./app.module.css";
 // import { render } from "react-dom"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Maker from "./components/maker/maker";
-function App({ authService }) {
+function App({ FileInput, authService }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
@@ -11,7 +11,7 @@ function App({ authService }) {
           <Route path="/" element={<Login authService={authService} />}></Route>
           <Route
             path="/maker"
-            element={<Maker authService={authService} />}
+            element={<Maker FileInput={FileInput} authService={authService} />}
           ></Route>
         </Routes>
       </BrowserRouter>
