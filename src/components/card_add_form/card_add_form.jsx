@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Button from "../button/button";
 import ImageFileInput from "../image_file_input/image_file_input";
 import styles from "./card_add_form.module.css";
-const CardAddForm = ({ onAdd }) => {
+const CardAddForm = ({ creadteOrUpdateCard }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -25,7 +25,7 @@ const CardAddForm = ({ onAdd }) => {
       fileURL: "",
     };
     formRef.current.reset();
-    onAdd(card);
+    creadteOrUpdateCard(card);
   };
 
   return (
