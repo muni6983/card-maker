@@ -27,7 +27,7 @@ const Maker = ({ FileInput, authService }) => {
       title: "muni code",
       email: "muni6983@gmail.com",
       message: "hihi",
-      fileName: "muni image",
+      fileName: "muni image2",
       fileURL: null,
     },
     3: {
@@ -38,7 +38,7 @@ const Maker = ({ FileInput, authService }) => {
       title: "muni code",
       email: "muni6983@gmail.com",
       message: "hihi",
-      fileName: "muni image",
+      fileName: "muni image3",
       fileURL: "muni.png",
     },
   });
